@@ -38,7 +38,7 @@ public class MailImpl implements MailService {
         MimeMessageHelper helper = new MimeMessageHelper(message,
                 MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
                 StandardCharsets.UTF_8.name());
-        helper.setTo(emailDto.getToUsers().toArray(new String[0]));
+        helper.setTo(emailDto.getEmailsFrom().toArray(new String[0]));
         helper.setFrom(new InternetAddress(USERNAME));
         helper.setSubject("HTML email from Spring Boot");
         helper.setText(process, true);

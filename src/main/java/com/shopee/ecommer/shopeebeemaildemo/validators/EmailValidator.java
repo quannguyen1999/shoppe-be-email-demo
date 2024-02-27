@@ -10,8 +10,8 @@ public class EmailValidator extends CommonValidator{
 
     public void validateEmail(EmailDto emailDto) {
         //Check To User
-        checkList().accept(emailDto.getToUsers(), EMAIL_TO_INVALID);
-        emailDto.toUsers.forEach(this::validateEmail);
+        checkList().accept(emailDto.getEmailsTo(), EMAIL_TO_INVALID);
+        emailDto.getEmailsTo().forEach(this::validateEmail);
 
         //Check Subject
         checkEmpty().accept(emailDto.getSubject(), EMAIL_SUBJECT_INVALID);
