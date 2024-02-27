@@ -1,0 +1,17 @@
+spring:
+  mail:
+    username: phatxitxaydung@gmail.com
+    host: smtp.gmail.com
+    port: 587
+    password: dmvk xuhc ybgi trnh
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            required: true
+            enable: true
+        debug: true
+
