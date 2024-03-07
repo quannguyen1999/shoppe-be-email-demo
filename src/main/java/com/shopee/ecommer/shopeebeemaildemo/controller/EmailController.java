@@ -17,7 +17,8 @@ public class EmailController {
     protected final MailService mailService;
 
     @GetMapping("/email")
-    public String email() {
+    public String email() throws InterruptedException {
+        Thread.sleep(10000);
 //        try {
 //            mailService.sendHtmlMail(Arrays.asList("nguyendanganhquan99@gmail.com"));
 //        } catch (MessagingException e) {

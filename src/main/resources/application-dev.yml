@@ -26,3 +26,12 @@ spring:
             enable: true
         debug: true
 
+# Eureka
+eureka:
+  preferIdAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8072/eureka/
+
