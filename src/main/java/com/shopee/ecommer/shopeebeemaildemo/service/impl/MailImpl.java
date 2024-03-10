@@ -27,7 +27,6 @@ public class MailImpl implements MailService {
     protected final JavaMailSender mailSender;
     protected final SpringTemplateEngine templateEngine;
 
-
     @Override
     public void sendHtmlMail(EmailDto emailDto) throws MessagingException {
         MimeMessage message = mailSender.createMimeMessage();

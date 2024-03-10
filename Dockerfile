@@ -4,6 +4,9 @@ FROM openjdk:17-jdk-slim
 #Author Maintain
 MAINTAINER quannguycen
 
+# Install CURL
+RUN apt-get update && apt-get install -y curl
+
 #Copy File Jar to Docker
 COPY target/shopee-be-email-demo-0.0.1-SNAPSHOT.jar shopee-be-email-demo-0.0.1-SNAPSHOT.jar
 

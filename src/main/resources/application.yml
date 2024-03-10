@@ -9,32 +9,3 @@ spring:
   config:
     import: "optional:configserver:http://localhost:8071/"
 
-#Config Eureka
-#Allow disabled server by call api actuator/shutdown with method post
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    shutdown:
-      enabled: true
-    health:
-      probes:
-        enabled: true
-  info:
-    env:
-      enabled: true
-  metrics:
-    tags:
-      application: ${spring.application.name}
-endpoints:
-  shutdown:
-    enabled: true
-info:
-  app:
-    name: "email"
-    description: "Shopee be email demo"
-    version: "1.0.0"
-

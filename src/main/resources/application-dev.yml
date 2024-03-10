@@ -1,3 +1,31 @@
+#Config Eureka
+#Allow disabled server by call api actuator/shutdown with method post
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+endpoints:
+  shutdown:
+    enabled: true
+info:
+  app:
+    name: "email"
+    description: "Shopee be email demo"
+    version: "1.0.0"
+
 custom:
   rabbit-mq:
     queue: email-registration
@@ -28,10 +56,10 @@ spring:
 
 # Eureka
 eureka:
-  preferIdAddress: true
+  preferIdAddress: false
   client:
-    fetchRegistry: true
-    registerWithEureka: true
+    fetchRegistry: false
+    registerWithEureka: false
     serviceUrl:
       defaultZone: http://localhost:8072/eureka/
 
