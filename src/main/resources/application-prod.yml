@@ -3,12 +3,12 @@ custom:
     queue: email-registration
 spring:
   #RabbitMQ
-  rabbitmq:
-    host: localhost
-    username: guest
-    password: guest
-    port: 5672
-    virtual-host: /
+#  rabbitmq:
+#    host: localhost
+#    username: guest
+#    password: guest
+#    port: 5672
+#    virtual-host: /
   #Mail
   mail:
     username: spring.boot.programming@gmail.com
@@ -33,8 +33,12 @@ spring:
         emailsms-in-0:
           destination: send-communication
           group: ${spring.application.name}
-#        emailsms-out-0:
-#          destination: communication-sent
+        emailsms-out-0:
+          destination: communication-sent
+  kafka:
+    binder:
+      brokers:
+        - localhost:9092
 
 # Eureka
 eureka:

@@ -15,3 +15,7 @@ docker run -p 9000:9000 quannguyen1999/shopee-be-email-demo
 docker run -d -p 9000:9000 quannguyen1999/shopee-be-email-demo
 
 Access: http://localhost:9000
+
+# Link install Kafka
+https://kafka.apache.org/quickstart
+=> follow this link to run port kafka (port default 9092)
